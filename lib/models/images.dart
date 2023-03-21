@@ -4,7 +4,9 @@ class UnbordingContent {
   String discription;
 
   UnbordingContent(
-      {required this.image, required this.title, required this.discription});
+      {
+        required this.image, 
+        required this.title, required this.discription});
 }
 
 List<UnbordingContent> contents = [

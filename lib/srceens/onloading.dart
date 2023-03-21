@@ -51,16 +51,16 @@ class _OnbordingState extends State<Onbording> {
                       ),
                       Text(
                         contents[i].title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 35,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text(
                         contents[i].discription,
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           color: Colors.grey,
                         ),
@@ -82,11 +82,12 @@ class _OnbordingState extends State<Onbording> {
           ),
           Container(
             height: 60,
-            margin: EdgeInsets.all(40),
+            margin: const EdgeInsets.all(40),
             width: double.infinity,
             child: ElevatedButton(
-              child: Text(
-                  currentIndex == contents.length - 1 ? "Bắt đầu" : "Tiếp theo"),
+              child: Text(currentIndex == contents.length - 1
+                  ? "Bắt đầu"
+                  : "Tiếp theo"),
               onPressed: () {
                 if (currentIndex == contents.length - 1) {
                   Navigator.pushReplacement(
@@ -107,7 +108,7 @@ class _OnbordingState extends State<Onbording> {
                   );
                 }
                 _controller.nextPage(
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   curve: Curves.bounceIn,
                 );
               },
@@ -127,7 +128,7 @@ class _OnbordingState extends State<Onbording> {
     return Container(
       height: 10,
       width: currentIndex == index ? 25 : 10,
-      margin: EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: Theme.of(context).primaryColor,
